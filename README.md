@@ -1,4 +1,4 @@
-# my-portfolio-v2-3D
+# My 3D Portfolio - lizas.space  
 TODO: Fix title, update description
 
 ## Ongoing Documentation Draft
@@ -9,7 +9,18 @@ TODO: Fix title, update description
 - React Three Fiber and Three.js for 3D rendering. 
 - Tailwind CSS for styling.
 
+### Initialization
+
+- Inside root folder - npm create vite@latest ./; Then chose React > JavaScript. npm install; 
+
 ### Hosting 
 
 - https://hostinger.com/
+
+### Productivity tools, Shortcuts
+
+- Using GitHub Copilot.
+- rafce - This snippet sets up a basic React functional component with the necessary import statement for React and an empty functional component that returns JSX.
+  - ES7+ React/Redux/React-Native snippets // vs code extension.
+- ctrl+space - auto import components.
 - 
