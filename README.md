@@ -17,6 +17,9 @@ TODO: Fix title, update description
 
 - https://tailwindcss.com/docs/guides/vite
 - Extension - Tailwind CSS IntelliSense
+
+### Building App Skeleton
+- Routing - npm install react-router-dom;
 - 
 
 ### Hosting 
