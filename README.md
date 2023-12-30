@@ -30,8 +30,7 @@ TODO: Fix title, update description
 
 - Using GitHub Copilot.
 - rafce - This snippet sets up a basic React functional component with the necessary import statement for React and an empty functional component that returns JSX.
-  - ES7+ React/Redux/React-Native snippets // vs code extension.
-- ctrl+space - auto import components.
+  - ES7+ React/Redux/React-Native snippets // vs code extension. 
 
 ### Wanna Learn More List
 
