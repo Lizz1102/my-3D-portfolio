@@ -11,7 +11,13 @@ TODO: Fix title, update description
 
 ### Initialization
 
-- Inside root folder - npm create vite@latest ./; Then chose React > JavaScript. npm install; 
+- Inside root folder - npm create vite@latest ./; Then chose React > JavaScript. npm install;
+
+### Tailwind CSS
+
+- https://tailwindcss.com/docs/guides/vite
+- Extension - Tailwind CSS IntelliSense
+- 
 
 ### Hosting 
 
@@ -23,4 +29,16 @@ TODO: Fix title, update description
 - rafce - This snippet sets up a basic React functional component with the necessary import statement for React and an empty functional component that returns JSX.
   - ES7+ React/Redux/React-Native snippets // vs code extension.
 - ctrl+space - auto import components.
+
+### Wanna Learn More List
+
+- Tailwind CSS - I've legit never seen any CSS framework this elegant before! I was always clueless about CSS styling but this framework is giving me so much control with ease! 
 - 
+- 
+
+## Credits
+
+- [Emilian Kasemi](https://www.youtube.com/watch?v=mJRuHhKJ2cs&t=8s&ab_channel=EmilianKasemi)
+- [Adrian Hajdin](https://www.youtube.com/watch?v=FkowOdMjvYo&list=PL6QREj8te1P7rEwj_IzsoLzQ-FBbZ6lqP&ab_channel=JavaScriptMastery)
+- [Free Custom Logo Maker](https://logo.com/)
+- [Tailwind CSS - The best CSS Framework](https://tailwindcss.com/)
