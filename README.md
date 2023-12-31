@@ -20,7 +20,11 @@ TODO: Fix title, update description
 
 ### Building App Skeleton
 - Routing - npm install react-router-dom;
-- 
+
+### 3D Canvas - Homepage
+
+- https://docs.pmnd.rs/react-three-fiber/getting-started/introduction - React-three-fiber is a React renderer for three.js.
+- npm install @react-three/fiber;
 
 ### Hosting 
 
