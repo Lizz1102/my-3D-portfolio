@@ -25,18 +25,26 @@ TODO: Fix title, update description
 
 - https://docs.pmnd.rs/react-three-fiber/getting-started/introduction - React-three-fiber is a React renderer for three.js.
 - npm install @react-three/fiber;
+- Canvas - https://docs.pmnd.rs/react-three-fiber/api/canvas
+- Drei - https://github.com/pmndrs/drei - npm install @react-three/drei;
+-
+
+### 3D Models
+
+- Download 3D models for free - https://sketchfab.com/
+- https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be7785907
+- 3D Model from: https://sketchfab.com/3d-models/phoenix-bird-844ba0cf144a413ea92c779f18912042
+- 
+- https://gltf.pmnd.rs/ -  app that turns gltf or glb files into jsx components
+- npm install @react-spring/three;
+- Use the primitive element when you want to directly embed a complex 3D model or scene
+- 
 
 ### Hosting 
 
 - https://hostinger.com/
 
-### Productivity tools, Shortcuts
-
-- Using GitHub Copilot.
-- rafce - This snippet sets up a basic React functional component with the necessary import statement for React and an empty functional component that returns JSX.
-  - ES7+ React/Redux/React-Native snippets // vs code extension. 
-
-### Wanna Learn More List
+### Learn More List
 
 - Tailwind CSS - I've legit never seen any CSS framework this elegant before! I was always clueless about CSS styling but this framework is giving me so much control with ease! 
 - 
