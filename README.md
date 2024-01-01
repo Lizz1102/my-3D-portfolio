@@ -42,10 +42,14 @@ TODO: Fix title, update description
 - https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be7785907
 - 3D Model from: https://sketchfab.com/3d-models/phoenix-bird-844ba0cf144a413ea92c779f18912042
 - 
-- https://gltf.pmnd.rs/ -  app that turns gltf or glb files into jsx components
+
 - npm install @react-spring/three;
 - Use the primitive element when you want to directly embed a complex 3D model or scene
-- 
+
+### Debugging Tools
+
+- Inspect 3D model info: https://gltf-viewer.donmccurdy.com/
+- Turn gltf or glb files into jsx componentshttps://gltf.pmnd.rs/
 
 ### Hosting 
 
