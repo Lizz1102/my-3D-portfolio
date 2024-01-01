@@ -6,12 +6,13 @@ TODO: Fix title, update description
 ### Notes For Future Reference
 
 - Goal: Become a master in building React UIs and take the skill to the next level by learning how to upgrade them by React Three Fiber. And build a cool portfolio!
-- React Three Fiber and Three.js for 3D rendering. 
-- Tailwind CSS for styling.
+- React Three Fiber and Three.js for 3D rendering
+- Tailwind CSS for styling
 
 ### Initialization
 
-- Inside root folder - npm create vite@latest ./; Then chose React > JavaScript. npm install;
+- Inside root folder - npm create vite@latest ./; Then chose React > JavaScript
+- npm install;
 
 ### Tailwind CSS
 
@@ -23,11 +24,17 @@ TODO: Fix title, update description
 
 ### 3D Canvas - Homepage
 
-- https://docs.pmnd.rs/react-three-fiber/getting-started/introduction - React-three-fiber is a React renderer for three.js.
+- https://docs.pmnd.rs/react-three-fiber/getting-started/introduction - React-three-fiber is a React renderer for three.js
 - npm install @react-three/fiber;
 - Canvas - https://docs.pmnd.rs/react-three-fiber/api/canvas
 - Drei - https://github.com/pmndrs/drei - npm install @react-three/drei;
 -
+### Rotation 
+
+- Three.js renderer and viewport.
+- useThree() hook
+- useRef to get the last mouse position
+- 
 
 ### 3D Models
 
