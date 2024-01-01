@@ -24,7 +24,7 @@ TODO: Fix title, update description
 
 ### 3D Canvas - Homepage
 
-- https://docs.pmnd.rs/react-three-fiber/getting-started/introduction - React-three-fiber is a React renderer for three.js
+- https://docs.pmnd.rs/react-three-fiber/getting-started/introduction - react-three-fiber is a React renderer for three.js
 - npm install @react-three/fiber;
 - Canvas - https://docs.pmnd.rs/react-three-fiber/api/canvas
 - Drei - https://github.com/pmndrs/drei - npm install @react-three/drei;
