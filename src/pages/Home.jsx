@@ -1,4 +1,4 @@
-import { useState, Suspense } from "react";
+import { useState, Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 import Island from "../models/Island";
@@ -7,9 +7,31 @@ import Bird from "../models/Bird";
 import Plane from "../models/Plane";
 import HomeInfo from "../components/HomeInfo";
 
+import sakura from "../assets/sakura.mp3";
+import { soundoff, soundon } from "../assets/icons";
+
+// TODO:
+// Tweak Navigation - smooth, intuitive
+// Add helptet - drag to explore 
+// Add dark mode switching
+// Add credit page for sketchfab 3D artists 
 const Home = () => {
+    const audioRef = useRef(new Audio(sakura));
+    audioRef.current.volume = 0.4; 
+    audioRef.current.loop = true;
     const [currentStage, setCurrentStage] = useState(1);
     const [isRotating, setIsRotating] = useState(false);
+    const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+    useEffect(() => {
+        if (isPlayingMusic) {
+            audioRef.current.play();
+        }
+
+        return () => {
+            audioRef.current.pause();
+        };
+    }, [isPlayingMusic]);
 
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
@@ -80,6 +102,15 @@ const Home = () => {
                     />
                 </Suspense>
             </Canvas>
+
+            <div className="absolute bottom-2 right-2">
+                <img
+                    src={!isPlayingMusic ? soundoff : soundon}
+                    alt="sound"
+                    onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+                    className="w-10 h-10 cursor-pointer object-contain"
+                />
+            </div>
         </section>
     );
 };
