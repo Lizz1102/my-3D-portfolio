@@ -19,7 +19,7 @@ const Home = () => {
     const audioRef = useRef(new Audio(sakura));
     audioRef.current.volume = 0.4; 
     audioRef.current.loop = true;
-    const [currentStage, setCurrentStage] = useState(1);
+    const [currentStage, setCurrentStage] = useState(null);
     const [isRotating, setIsRotating] = useState(false);
     const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
@@ -36,7 +36,7 @@ const Home = () => {
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
         let screenPosition = [0, -6.5, -43.4];
-        let rotation = [0.1, 4.7077, 0];
+        let rotation = [0.1, 4.80, 0];
 
         if (window.innerWidth < 768) {
             screenScale = [0.9, 0.9, 0.9];
