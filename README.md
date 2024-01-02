@@ -46,23 +46,22 @@ TODO: Fix title, update description
 - npm install @react-spring/three;
 - Use the primitive element when you want to directly embed a complex 3D model or scene
 
+### Email
+
+- npm install @emailjs/browser
+
 ### Debugging Tools
 
-- Inspect 3D model info: https://gltf-viewer.donmccurdy.com/
-- Turn gltf or glb files into jsx componentshttps://gltf.pmnd.rs/
+- Inspect 3D model info: https://gltf-viewer.donmccurdy.com/. Also, const { actions } = useAnimations(animations, group); // console log actions, it has the animation values in it
+- Turn gltf or glb files into jsx components https://gltf.pmnd.rs/
 
 ### Hosting 
 
 - https://hostinger.com/
 
-### Learn More List
-
-- Tailwind CSS - I've legit never seen any CSS framework this elegant before! I was always clueless about CSS styling but this framework is giving me so much control with ease! 
-- 
-- 
-
 ## Credits
 
+- [Joshua's World](https://www.joshuas.world/)
 - [Emilian Kasemi](https://www.youtube.com/watch?v=mJRuHhKJ2cs&t=8s&ab_channel=EmilianKasemi)
 - [Adrian Hajdin](https://www.youtube.com/watch?v=FkowOdMjvYo&list=PL6QREj8te1P7rEwj_IzsoLzQ-FBbZ6lqP&ab_channel=JavaScriptMastery)
 - [Free Custom Logo Maker](https://logo.com/)
