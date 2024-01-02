@@ -1,5 +1,5 @@
 # My 3D Portfolio - lizas.space  
-TODO: Fix title, update description
+// TODO: Fix title, update description
 
 ## Ongoing Documentation Draft
 
@@ -55,9 +55,15 @@ TODO: Fix title, update description
 - Inspect 3D model info: https://gltf-viewer.donmccurdy.com/. Also, const { actions } = useAnimations(animations, group); // console log actions, it has the animation values in it
 - Turn gltf or glb files into jsx components https://gltf.pmnd.rs/
 
+### About Page
+
+- react-vertical-timeline-component - npm i react-vertical-timeline-component
+
 ### Hosting 
 
 - https://hostinger.com/
+- npm run build;
+- https://lizas.space/ ------>>>>> Yeeeeeee SO HAPPPPYYY! 
 
 ## Credits
 
