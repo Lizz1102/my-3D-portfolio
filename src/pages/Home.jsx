@@ -1,7 +1,6 @@
 import { useState, Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
-import Island from "../models/Island";
 import Sky from "../models/Sky";
 import Bird from "../models/Bird";
 import Plane from "../models/Plane";
@@ -9,15 +8,16 @@ import HomeInfo from "../components/HomeInfo";
 
 import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons";
+import Island2 from "../models/Island2";
 
 // TODO:
 // Tweak Navigation - smooth, intuitive
-// Add helptet - drag to explore 
+// Add helptet - drag to explore
 // Add dark mode switching
-// Add credit page for sketchfab 3D artists 
+// Add credit page for sketchfab 3D artists
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));
-    audioRef.current.volume = 0.4; 
+    audioRef.current.volume = 0.4;
     audioRef.current.loop = true;
     const [currentStage, setCurrentStage] = useState(null);
     const [isRotating, setIsRotating] = useState(false);
@@ -35,13 +35,13 @@ const Home = () => {
 
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
-        let screenPosition = [0, -6.5, -43.4];
-        let rotation = [0.1, 4.80, 0];
+        let screenPosition = [0, -14, -43.4];
+        let rotation = [0.2, 4.8, 0];
 
         if (window.innerWidth < 768) {
-            screenScale = [0.9, 0.9, 0.9];
+            screenScale = [0.18, 0.18, 0.18];
         } else {
-            screenScale = [1, 1, 1];
+            screenScale = [0.23, 0.2, 0.3];
         }
 
         return [screenScale, screenPosition, rotation];
@@ -86,7 +86,7 @@ const Home = () => {
                     />
                     <Bird />
                     <Sky isRotating={isRotating} />
-                    <Island
+                    <Island2
                         position={islandPosition}
                         scale={islandScale}
                         rotation={islandRotation}
