@@ -13,13 +13,13 @@ import { a } from "@react-spring/three";
 
 import islandScene from "../assets/3d/island.glb";
 
-const Island = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
+const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     const islandRef = useRef();
 
     const { gl, viewport } = useThree();
     const { nodes, materials } = useGLTF(islandScene);
 
-    // TODO - make rotation of island smoother
+    // TODO: - make rotation of island smoother
     const lastX = useRef(0);
     const rotationSpeed = useRef(0);
     const dampingFactor = 0.95;
@@ -60,10 +60,12 @@ const Island = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
             if (!isRotating) setIsRotating(true);
 
             islandRef.current.rotation.y += 0.005 * Math.PI;
+            rotationSpeed.current = 0.0125;
         } else if (e.key === "ArrowRight") {
             if (!isRotating) setIsRotating(true);
 
             islandRef.current.rotation.y -= 0.005 * Math.PI;
+            rotationSpeed.current = -0.0125;
         }
     };
 

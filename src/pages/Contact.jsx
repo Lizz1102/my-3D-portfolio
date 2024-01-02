@@ -7,6 +7,8 @@ import useAlert from "../hooks/useAlert";
 import Loader from "../components/Loader";
 import Alert from "../components/Alert";
 
+// TODO: Add a flying dragon, fly/dance when sent 
+// TODO: Replace personal email with less important email
 const Contact = () => {
     const formRef = useRef(null);
     const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -69,7 +71,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="relative flex lg:flex-row flex-col max-container">
+        <section className="relative flex lg:flex-row flex-col max-container h-[100vh]">
             {alert.show && <Alert {...alert} />}
 
             <div className="flex-1 min-w-[50%] flex flex-col">

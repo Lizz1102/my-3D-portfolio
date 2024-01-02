@@ -5,7 +5,7 @@ License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 Source: https://sketchfab.com/3d-models/dragon-boss-a8d48a46c4264148974a7b7c37087e94
 Title: Dragon Boss
 */
-// TODO - Replace with my own flying object (for example, dragon) 
+// TODO: - Replace with my own flying object (for example, dragon) 
 import { useRef, useEffect } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
 
