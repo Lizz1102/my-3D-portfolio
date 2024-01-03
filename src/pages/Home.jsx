@@ -8,13 +8,14 @@ import HomeInfo from "../components/HomeInfo";
 
 import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons";
-import Island2 from "../models/Island2";
+import Island3 from "../models/Island3";
 
 // TODO:
 // Tweak Navigation - smooth, intuitive
 // Add helptet - drag to explore
 // Add dark mode switching
 // Add credit page for sketchfab 3D artists
+// there is a small dot outside of the island
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));
     audioRef.current.volume = 0.4;
@@ -35,13 +36,13 @@ const Home = () => {
 
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
-        let screenPosition = [0, -13, -43.4];
-        let rotation = [0.2, 5.6, 0];
+        let screenPosition = [0, -4, -43.4];
+        let rotation = [0.2, 4.37, 0];
 
         if (window.innerWidth < 768) {
-            screenScale = [0.18, 0.18, 0.18];
+            screenScale = [0.013, 0.013, 0.013];
         } else {
-            screenScale = [0.23, 0.2, 0.3];
+            screenScale = [0.0197, 0.0197, 0.0197];
         }
 
         return [screenScale, screenPosition, rotation];
@@ -55,7 +56,7 @@ const Home = () => {
             screenPosition = [0, -1.5, 0];
         } else {
             screenScale = [3, 3, 3];
-            screenPosition = [0, -4, -4];
+            screenPosition = [0, -5, -4];
         }
 
         return [screenScale, screenPosition];
@@ -77,16 +78,16 @@ const Home = () => {
                 camera={{ near: 0.1, far: 1000 }}
             >
                 <Suspense fallback={<Loader />}>
-                    <directionalLight position={[1, 1, 1]} intensity={2} />
-                    <ambientLight intensity={0.5} />
+                    <directionalLight position={[1, 1, 1]} intensity={4} />
+                    <ambientLight intensity={2.4} />
                     <hemisphereLight
                         skyColor="#b1e1ff"
                         groundColor="#000000"
-                        intensity={1}
+                        intensity={4}
                     />
                     <Bird />
                     <Sky isRotating={isRotating} />
-                    <Island2
+                    <Island3
                         position={islandPosition}
                         scale={islandScale}
                         rotation={islandRotation}
