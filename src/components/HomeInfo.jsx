@@ -14,7 +14,10 @@ const InfoBox = ({ text, link, btnText }) => (
 
 const renderContent = {
     1: (
-        <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-pink py-4 px-8 text-white mx-5">
+        <h1
+            className="sm:text-xl sm:leading-snug text-center neo-brutalism-pink py-4 px-8 text-white mx-5 relative"
+            style={{ top: "-40px" }}
+        >
             Hi, I'm
             <span className="font-semibold mx-2 text-white">
                 <span className="text-4xl">L</span>iza
