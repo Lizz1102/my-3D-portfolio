@@ -35,8 +35,8 @@ const Home = () => {
 
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
-        let screenPosition = [0, -14, -43.4];
-        let rotation = [0.2, 4.8, 0];
+        let screenPosition = [0, -13, -43.4];
+        let rotation = [0.2, 5.6, 0];
 
         if (window.innerWidth < 768) {
             screenScale = [0.18, 0.18, 0.18];
