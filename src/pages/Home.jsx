@@ -2,13 +2,13 @@ import { useState, Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 import Sky from "../models/Sky";
-import Bird from "../models/Bird";
 import Plane from "../models/Plane";
 import HomeInfo from "../components/HomeInfo";
 
 import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons";
 import Island3 from "../models/Island3";
+import Dragon from "../models/Dragon";
 
 // TODO:
 // Tweak Navigation - smooth, intuitive
@@ -78,14 +78,14 @@ const Home = () => {
                 camera={{ near: 0.1, far: 1000 }}
             >
                 <Suspense fallback={<Loader />}>
-                    <directionalLight position={[1, 1, 1]} intensity={4} />
-                    <ambientLight intensity={2.4} />
+                    <directionalLight position={[1, 1, 1]} intensity={3} />
+                    <ambientLight intensity={1} />
                     <hemisphereLight
                         skyColor="#b1e1ff"
                         groundColor="#000000"
-                        intensity={4}
+                        intensity={2}
                     />
-                    <Bird />
+                    <Dragon />
                     <Sky isRotating={isRotating} />
                     <Island3
                         position={islandPosition}
