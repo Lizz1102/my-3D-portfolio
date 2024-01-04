@@ -73,7 +73,7 @@ const Contact = () => {
         <section className="relative flex lg:flex-row flex-col max-container h-[100vh]">
             {alert.show && <Alert {...alert} />}
 
-            <div className="flex-grow min-w-[40%] flex flex-col">
+            <div className="flex-grow min-w-[35%] flex flex-col">
                 <h1 className="head-text">Get in Touch</h1>
 
                 <form
@@ -140,7 +140,7 @@ const Contact = () => {
                 <Canvas
                     camera={{
                         position: [0, 0, 6],
-                        fov: 75,
+                        fov: 85,
                         near: 0.1,
                         far: 1000,
                     }}
@@ -151,9 +151,9 @@ const Contact = () => {
                         <Dragon2
                             setCurrentAnimation={setCurrentAnimation}
                             currentAnimation={currentAnimation}
-                            position={[-0.5, -1.9, 1.5]}
-                            rotation={[12.6, -0.6, 0]}
-                            scale={[2.1, 2.1, 2.1]}
+                            position={[-1.5, -0.8, 1.5]}
+                            rotation={[12.4, -0.6, 0]}
+                            scale={[2, 2, 2]}
                         />
                     </Suspense>
                 </Canvas>
