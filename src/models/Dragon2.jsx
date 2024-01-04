@@ -7,11 +7,12 @@ Title: Dragon White Low Poly
 */
 
 import React, { useEffect, useRef } from "react";
+import * as THREE from "three";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
 import scene from "../assets/3d/dragon2.glb";
 
-const Dragon2 = ({ currentAnimation, ...props }) => {
+const Dragon2 = ({ setCurrentAnimation, currentAnimation, ...props }) => {
     const group = useRef();
     const { nodes, materials, animations } = useGLTF(scene);
     const { actions } = useAnimations(animations, group);
@@ -20,13 +21,37 @@ const Dragon2 = ({ currentAnimation, ...props }) => {
         //console.log(actions);
         Object.values(actions).forEach((action) => action.stop());
 
-        if (actions[currentAnimation]) {
-            const action = actions[currentAnimation];
-            if (currentAnimation === "stand") {
-                action.timeScale = 0.2;
-            }
-            action.play();
+        if (currentAnimation.length === 0) return;
+
+        const animationName = currentAnimation[0];
+        const action = actions[animationName];
+
+        if (!action) return;
+
+        if (animationName === "stand") {
+            action.setLoop(THREE.LoopRepeat);
+            action.timeScale = 0.2;
+        } else {
+            action.setLoop(THREE.LoopOnce);
         }
+
+        action.clampWhenFinished = true; // Prevent the animation from resetting after it's finished
+        action.play();
+
+        const mixer = action.getMixer();
+        const onFinished = (event) => {
+            if (event.action === action) {
+                // Remove the first animation from the array and set the state
+                const remainingAnimations = currentAnimation.slice(1);
+                setCurrentAnimation(remainingAnimations);
+
+                // Remove the event listener
+                mixer.removeEventListener("finished", onFinished);
+            }
+        };
+
+        // Add an event listener to the mixer
+        mixer.addEventListener("finished", onFinished);
     }, [actions, currentAnimation]);
 
     return (

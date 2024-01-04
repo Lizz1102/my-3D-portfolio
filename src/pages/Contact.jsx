@@ -14,7 +14,7 @@ const Contact = () => {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
     //const { alert, showAlert, hideAlert } = useAlert();
     const [isLoading, setIsLoading] = useState(false);
-    const [currentAnimation, setCurrentAnimation] = useState("stand");
+    const [currentAnimation, setCurrentAnimation] = useState(["stand"]);
 
     const { alert, showAlert, hideAlert } = useAlert();
 
@@ -22,13 +22,13 @@ const Contact = () => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleFocus = () => setCurrentAnimation("stand");
-    const handleBlur = () => setCurrentAnimation("stand");
+    const handleFocus = () => setCurrentAnimation(["stand"]);
+    const handleBlur = () => setCurrentAnimation(["stand"]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsLoading(true);
-        setCurrentAnimation("special");
+        setCurrentAnimation(["deaddown", "special", "stand"]);
         emailjs
             .send(
                 import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -54,9 +54,8 @@ const Contact = () => {
 
                 setTimeout(() => {
                     hideAlert();
-                    setCurrentAnimation("stand");
                     setForm({ name: "", email: "", message: "" });
-                }, [5000]);
+                }, [3000]);
             })
             .catch((error) => {
                 setIsLoading(false);
@@ -150,6 +149,7 @@ const Contact = () => {
                     <ambientLight intensity={0.5} />
                     <Suspense fallback={<Loader />}>
                         <Dragon2
+                            setCurrentAnimation={setCurrentAnimation}
                             currentAnimation={currentAnimation}
                             position={[-0.5, -1.9, 1.5]}
                             rotation={[12.6, -0.6, 0]}
