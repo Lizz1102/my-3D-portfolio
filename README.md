@@ -1,6 +1,6 @@
 # My 3D Portfolio - lizas.space  
-// TODO: Fix title, update description
 
+- Live website link: coming soon! 
 ## Ongoing Documentation Draft
 
 ### Notes For Future Reference
