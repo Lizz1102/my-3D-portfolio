@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 
 import Loader from "../components/Loader";
 import Sky from "../models/Sky";
-import Plane from "../models/Plane";
+import Plane2 from "../models/Plane2";
 import HomeInfo from "../components/HomeInfo";
 
 import sakura from "../assets/sakura.mp3";
@@ -17,7 +17,7 @@ import Dragon from "../models/Dragon";
 // Add credit page for sketchfab 3D artists
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));
-    audioRef.current.volume = 0.4;
+    audioRef.current.volume = 0.2;
     audioRef.current.loop = true;
     const [currentStage, setCurrentStage] = useState(null);
     const [isRotating, setIsRotating] = useState(false);
@@ -51,11 +51,11 @@ const Home = () => {
         let screenScale, screenPosition;
 
         if (window.innerWidth < 768) {
-            screenScale = [1.5, 1.5, 1.5];
-            screenPosition = [0, -1.5, 0];
+            screenScale = [0.4, 0.4, 0.4];
+            screenPosition = [0, -1, 0];
         } else {
-            screenScale = [3, 3, 3];
-            screenPosition = [0, -5, -4];
+            screenScale = [1.3, 1.3, 1.3];
+            screenPosition = [0, -4, -4];
         }
 
         return [screenScale, screenPosition];
@@ -99,11 +99,11 @@ const Home = () => {
                         setIsRotating={setIsRotating}
                         setCurrentStage={setCurrentStage}
                     />
-                    <Plane
+                    <Plane2
                         isRotating={isRotating}
                         scale={planeScale}
                         position={planePosition}
-                        rotation={[0, 20, 0]}
+                        rotation={[0, 0, 0]}
                     />
                 </Suspense>
             </Canvas>
