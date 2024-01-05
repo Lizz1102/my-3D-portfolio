@@ -5,7 +5,7 @@
 
 ### Notes For Future Reference
 
-- Goal: Become a master in building React UIs and take the skill to the next level by learning how to upgrade them by React Three Fiber. And build a cool portfolio!
+- Goal: Become better at building impressive React UIs and take the skill to the next level by learning how to upgrade them by React Three Fiber. And build a cool portfolio!
 - React Three Fiber and Three.js for 3D rendering
 - Tailwind CSS for styling
 
@@ -41,10 +41,8 @@
 - Download 3D models for free - https://sketchfab.com/
 - https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be7785907
 - 3D Model from: https://sketchfab.com/3d-models/phoenix-bird-844ba0cf144a413ea92c779f18912042
-- 
 
 - npm install @react-spring/three;
-- Use the primitive element when you want to directly embed a complex 3D model or scene
 
 ### Email
 
@@ -52,7 +50,7 @@
 
 ### Debugging Tools
 
-- Inspect 3D model info: https://gltf-viewer.donmccurdy.com/. Also, const { actions } = useAnimations(animations, group); // console log actions, it has the animation values in it
+- Inspect 3D model info: https://gltf-viewer.donmccurdy.com/ 
 - Turn gltf or glb files into jsx components https://gltf.pmnd.rs/
 
 ### About Page
