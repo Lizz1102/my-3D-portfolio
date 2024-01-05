@@ -7,7 +7,7 @@ import Plane2 from "../models/Plane2";
 import HomeInfo from "../components/HomeInfo";
 
 import sakura from "../assets/sakura.mp3";
-import { soundoff, soundon } from "../assets/icons";
+import { soundoff, soundon, dragHandIcon } from "../assets/icons";
 import Island2 from "../models/Island2";
 import Dragon from "../models/Dragon";
 
@@ -15,6 +15,8 @@ import Dragon from "../models/Dragon";
 // Tweak Navigation - smooth, intuitive
 // Add helptet - drag to explore
 // Add credit page for sketchfab 3D artists
+// Replace nicer loader
+// Nicer message sent alert
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));
     audioRef.current.volume = 0.2;
@@ -22,6 +24,8 @@ const Home = () => {
     const [currentStage, setCurrentStage] = useState(null);
     const [isRotating, setIsRotating] = useState(false);
     const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+    const [showHint, setShowHint] = useState(true);
 
     useEffect(() => {
         if (isPlayingMusic) {
@@ -70,6 +74,25 @@ const Home = () => {
             <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
                 {currentStage && <HomeInfo currentStage={currentStage} />}
             </div>
+
+            {showHint && (
+                <>
+                    <div className="hint-text pink-gradient_text">
+                        Drag Left To Explore
+                    </div>
+                    <div className="hand-icon-outer-container">
+                        <div className="hand-icon-container">
+                            <img
+                                src={dragHandIcon}
+                                alt="Drag to explore"
+                                className="hand-icon"
+                            />
+                            <div className="circle"></div>
+                        </div>
+                    </div>
+                </>
+            )}
+
             <Canvas
                 className={`w-full h-screen bg-transparent ${
                     isRotating ? "cursor-grabbing" : "cursor-grab"
@@ -98,6 +121,7 @@ const Home = () => {
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                         setCurrentStage={setCurrentStage}
+                        setShowHint={setShowHint}
                     />
                     <Plane2
                         isRotating={isRotating}

@@ -6,7 +6,13 @@ import { a } from "@react-spring/three";
 
 import islandScene from "../assets/3d/island2.glb";
 
-const Island2 = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
+const Island2 = ({
+    isRotating,
+    setIsRotating,
+    setCurrentStage,
+    setShowHint,
+    ...props
+}) => {
     const islandRef = useRef();
 
     const { gl, viewport } = useThree();
@@ -20,6 +26,8 @@ const Island2 = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
         e.stopPropagation();
         e.preventDefault();
         setIsRotating(true);
+
+        setShowHint(false);
 
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
 
@@ -59,6 +67,13 @@ const Island2 = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
             islandRef.current.rotation.y -= 0.005 * Math.PI;
             rotationSpeed.current = -0.0125;
         }
+
+        setShowHint((showHint) => {
+            if (showHint) {
+                return false;
+            }
+            return showHint;
+        });
     };
 
     const handleKeyUp = (e) => {
