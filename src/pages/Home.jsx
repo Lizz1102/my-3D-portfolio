@@ -51,11 +51,11 @@ const Home = () => {
         let screenScale, screenPosition;
 
         if (window.innerWidth < 768) {
-            screenScale = [0.4, 0.4, 0.4];
-            screenPosition = [0, -1, 0];
+            screenScale = [0.5, 0.4, 0.4];
+            screenPosition = [0, -2.5, 0];
         } else {
-            screenScale = [1.3, 1.3, 1.3];
-            screenPosition = [0, -4, -4];
+            screenScale = [1, 0.8, 0.8];
+            screenPosition = [0, -4.8, -4];
         }
 
         return [screenScale, screenPosition];
