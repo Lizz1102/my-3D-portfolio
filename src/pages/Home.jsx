@@ -1,5 +1,6 @@
 import { useState, Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
+
 import Loader from "../components/Loader";
 import Sky from "../models/Sky";
 import Plane from "../models/Plane";
@@ -7,15 +8,13 @@ import HomeInfo from "../components/HomeInfo";
 
 import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons";
-import Island3 from "../models/Island3";
+import Island2 from "../models/Island2";
 import Dragon from "../models/Dragon";
 
 // TODO:
 // Tweak Navigation - smooth, intuitive
 // Add helptet - drag to explore
-// Add dark mode switching
 // Add credit page for sketchfab 3D artists
-// there is a small dot outside of the island
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));
     audioRef.current.volume = 0.4;
@@ -36,13 +35,13 @@ const Home = () => {
 
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
-        let screenPosition = [0, -4, -43.4];
-        let rotation = [0.2, 4.37, 0];
+        let screenPosition = [0, -13, -43.4];
+        let rotation = [0.2, 5.6, 0];
 
         if (window.innerWidth < 768) {
-            screenScale = [0.013, 0.013, 0.013];
+            screenScale = [0.18, 0.18, 0.18];
         } else {
-            screenScale = [0.0197, 0.0197, 0.0197];
+            screenScale = [0.23, 0.2, 0.3];
         }
 
         return [screenScale, screenPosition, rotation];
@@ -85,9 +84,14 @@ const Home = () => {
                         groundColor="#000000"
                         intensity={2}
                     />
-                    <Dragon />
+                    <Dragon
+                        currentAnimation={"run"}
+                        position={[-5, 2, 1]}
+                        scale={[3, 3, 3]}
+                        rotation={[0, Math.PI, 1.5]}
+                    />
                     <Sky isRotating={isRotating} />
-                    <Island3
+                    <Island2
                         position={islandPosition}
                         scale={islandScale}
                         rotation={islandRotation}
