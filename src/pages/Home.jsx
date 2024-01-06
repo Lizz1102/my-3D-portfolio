@@ -77,7 +77,7 @@ const Home = () => {
 
             {showHint && (
                 <>
-                    <div className="hint-text pink-gradient_text">
+                    <div className="hint-text">
                         Drag Left To Explore
                     </div>
                     <div className="hand-icon-outer-container">
