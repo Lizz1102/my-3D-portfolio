@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { menu4, close } from "../assets/icons";
+import { Link, NavLink } from "react-router-dom";
+import { logo, menu4, close } from "../assets/icons";
 
+// TODO: fix: mobile look - stick to top or no?
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -11,6 +12,14 @@ const Navbar = () => {
 
     return (
         <>
+            <div className="absolute top-8 left-5 z-50">
+                <Link to="/">
+                    <img
+                        src={logo}
+                        className="w-11 h-11 cursor-pointer object-contain"
+                    />
+                </Link>
+            </div>
             <div
                 className={`navbar-sidebar ${isSidebarOpen ? "open" : ""}`}
                 onClick={(e) => e.stopPropagation()}
