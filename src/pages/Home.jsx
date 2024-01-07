@@ -12,10 +12,8 @@ import Island2 from "../models/Island2";
 import Dragon from "../models/Dragon";
 
 // TODO:
-// Tweak Navigation - smooth, intuitive
-// Add helptet - drag to explore
+// Reduce load time by reducing the size of the 3D models
 // Add credit page for sketchfab 3D artists
-// Replace nicer loader
 // Nicer message sent alert
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));

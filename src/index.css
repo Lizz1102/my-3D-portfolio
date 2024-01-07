@@ -169,23 +169,15 @@ body:has(.card[data-color="green"]:hover) {
     position: relative;
     border-radius: 10px;
     border: #2b77e7;
-    box-shadow:
-        0.6vmin 0.6vmin #336cc1,
-        1vmin 1vmin #0092db,
-        1vmin 1vmin #0092db,
-        0.65vmin 1vmin #0092db,
-        1vmin 0.65vmin #0092db;
+    box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db,
+        1vmin 1vmin #0092db, 0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
 }
 
 .neo-brutalism-white {
     background: #fff;
     border: #fff;
-    box-shadow:
-        0.6vmin 0.6vmin #fff,
-        1vmin 1vmin #d2e4ff,
-        1vmin 1vmin #d2e4ff,
-        0.65vmin 1vmin #d2e4ff,
-        1vmin 0.65vmin #d2e4ff;
+    box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
+        0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
 
 .neo-brutalism-pink {
@@ -194,10 +186,7 @@ body:has(.card[data-color="green"]:hover) {
     border-radius: 10px;
     border: #ff8080;
     box-shadow: rgb(204, 127, 127) 0px 22px 70px 4px;
-    transition:
-        background 0.3s ease,
-        border 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hand-icon-outer-container {
@@ -322,25 +311,22 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 .navbar-close-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: fixed;
+    top: 30px;
+    right: 30px;
     width: 20px;
     height: 20px;
+    background-size: contain;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
+    z-index: 10;
+    opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
 
 .menu-icon {
     position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 67px;
-    height: 67px;
+    width: 40px;
+    height: 40px;
     background-size: contain;
     cursor: pointer;
     z-index: 10;
@@ -351,9 +337,7 @@ body:has(.card[data-color="green"]:hover) {
 .hidden {
     opacity: 0;
     visibility: hidden;
-    transition:
-        opacity 0.3s ease-in-out,
-        visibility 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .visible {

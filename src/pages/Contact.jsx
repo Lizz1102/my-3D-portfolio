@@ -7,8 +7,9 @@ import Loader from "../components/Loader";
 import Alert from "../components/Alert";
 import Dragon2 from "../models/Dragon2";
 
-// TODO: Add a flying dragon, fly/dance when sent
-// TODO: email validation and error handling
+// TODO: Fix grey background isnt working on mobile
+// Fix dragon isn't centered on mobile
+// Fix Dragon is too small on mobile
 const Contact = () => {
     const formRef = useRef(null);
     const [form, setForm] = useState({ name: "", email: "", message: "" });

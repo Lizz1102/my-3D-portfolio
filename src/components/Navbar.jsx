@@ -1,10 +1,70 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { logo, menu4, close } from "../assets/icons";
 
-// TODO: fix: mobile look - stick to top or no?
+const Sidebar = ({ isSidebarOpen, toggleSidebar }) => (
+    <div
+        className={`navbar-sidebar ${isSidebarOpen ? "open" : ""}`}
+        onClick={(e) => e.stopPropagation()}
+    >
+        <div
+            className={`navbar-close-icon ${
+                isSidebarOpen ? "visible" : "hidden"
+            }`}
+            onClick={toggleSidebar}
+        >
+            <img src={close} alt="close icon" />
+        </div>
+        <ul>
+            {[
+                { to: "/", text: "Liza's Space" },
+                { to: "/about", text: "About Me" },
+                { to: "/projects", text: "My Projects" },
+                { to: "/contact", text: "Contact" },
+                { to: "/testimonials", text: "Peer Endorsements💖" },
+                { to: "/license", text: "License" },
+            ].map(({ to, text }) => (
+                <li key={to}>
+                    <NavLink
+                        to={to}
+                        className={({ isActive }) =>
+                            `font-mono text-sm md:text-lg ${
+                                isActive ? "text-blue-600" : "text-white"
+                            }`
+                        }
+                        onClick={toggleSidebar}
+                    >
+                        {text}
+                    </NavLink>
+                </li>
+            ))}
+        </ul>
+    </div>
+);
+
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(false);
+
+    const location = useLocation();
+    const isHomePage = location.pathname === "/";
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+            const visible = currentScrollPos > 0;
+            setPrevScrollPos(currentScrollPos);
+            setVisible(visible);
+            console.log(visible);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [prevScrollPos]);
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -12,112 +72,33 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="absolute top-8 left-5 z-50">
-                <Link to="/">
-                    <img
-                        src={logo}
-                        className="w-11 h-11 cursor-pointer object-contain"
-                    />
-                </Link>
-            </div>
             <div
-                className={`navbar-sidebar ${isSidebarOpen ? "open" : ""}`}
-                onClick={(e) => e.stopPropagation()}
+                className={`${
+                    isHomePage
+                        ? ""
+                        : "sticky top-0 left-0 z-50 w-full h-20 transition-all duration-300"
+                } ${visible ? "bg-white shadow-lg" : "bg-transparent"}`}
             >
+                <div className="fixed top-5 left-5 z-50">
+                    <Link to="/">
+                        <img
+                            src={logo}
+                            className="w-11 h-11 cursor-pointer object-contain"
+                        />
+                    </Link>
+                </div>
+                <Sidebar
+                    isSidebarOpen={isSidebarOpen}
+                    toggleSidebar={toggleSidebar}
+                />
                 <div
-                    className={`navbar-close-icon ${
-                        isSidebarOpen ? "visible" : "hidden"
+                    className={`menu-icon top-4 right-5 ${
+                        isSidebarOpen ? "hidden" : "visible"
                     }`}
                     onClick={toggleSidebar}
                 >
-                    <img src={close} alt="close icon" />
+                    <img src={menu4} alt="Menu" />
                 </div>
-                <ul>
-                    <li>
-                        <NavLink
-                            to="/"
-                            className={({ isActive }) =>
-                                `font-mono text-sm md:text-lg ${
-                                    isActive ? "text-blue-600" : "text-white"
-                                }`
-                            }
-                            onClick={toggleSidebar}
-                        >
-                            Liza's Space
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/about"
-                            className={({ isActive }) =>
-                                `font-mono text-sm md:text-lg ${
-                                    isActive ? "text-blue-600" : "text-white"
-                                }`
-                            }
-                            onClick={toggleSidebar}
-                        >
-                            About Me
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/projects"
-                            className={({ isActive }) =>
-                                `font-mono text-sm md:text-lg ${
-                                    isActive ? "text-blue-600" : "text-white"
-                                }`
-                            }
-                            onClick={toggleSidebar}
-                        >
-                            My Projects
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/contact"
-                            className={({ isActive }) =>
-                                `font-mono text-sm md:text-lg ${
-                                    isActive ? "text-blue-600" : "text-white"
-                                }`
-                            }
-                            onClick={toggleSidebar}
-                        >
-                            Contact
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/testimonials"
-                            className={({ isActive }) =>
-                                `font-mono text-sm md:text-lg ${
-                                    isActive ? "text-blue-600" : "text-white"
-                                }`
-                            }
-                            onClick={toggleSidebar}
-                        >
-                            Peer Endorsements💖
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/license"
-                            className={({ isActive }) =>
-                                `font-mono text-sm md:text-lg ${
-                                    isActive ? "text-blue-600" : "text-white"
-                                }`
-                            }
-                            onClick={toggleSidebar}
-                        >
-                            License
-                        </NavLink>
-                    </li>
-                </ul>
-            </div>
-            <div
-                className={`menu-icon ${isSidebarOpen ? "hidden" : "visible"}`}
-                onClick={toggleSidebar}
-            >
-                <img src={menu4} alt="Menu" />
             </div>
         </>
     );
