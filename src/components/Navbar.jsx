@@ -27,7 +27,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => (
                     <NavLink
                         to={to}
                         className={({ isActive }) =>
-                            `font-mono text-sm md:text-lg ${
+                            `font-poppins text-sm md:text-lg ${
                                 isActive ? "text-blue-600" : "text-white"
                             }`
                         }

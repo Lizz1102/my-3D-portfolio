@@ -1,8 +1,7 @@
-import { raven, geotab, iqvia } from "../assets/images";
+import { raven, geotab, iqvia, seoul, hira, oni } from "../assets/images";
 import {
     car,
     contact,
-    css,
     estate,
     express,
     git,
@@ -136,7 +135,7 @@ export const experiences = [
         iconBg: "#b7e4c7",
         date: "Jan 2014 - September 2015",
         points: [
-            "Developing e-Book reading application for huge library of Bengali books.",
+            "Developing e-book reading application for huge library of Bengali books.",
             "Designing customizable reading experience, syncing account and storage throughout devices and supporting all popular ebook formats.",
             "Implementing offline reading and web syncing.",
             "Collaborating with consultant, web developers in the designing process.",
@@ -215,25 +214,27 @@ export const projects = [
 
 export const testimonials = [
     {
-        testimonial: "This is a great product. I've had an amazing experience.",
-        name: "John Doe",
-        designation: "CEO",
-        company: "Tech Corp",
-        image: raven,
-    },
-    {
-        testimonial: "I love this service. It has made my work so much easier.",
-        name: "Jane Smith",
-        designation: "Product Manager",
-        company: "Innovative Solutions",
-        image: raven,
+        testimonial:
+            'If I am asked to give my recommendation in 1 word, then I will choose the word: "Dependable". This dependency helped us to take bigger calculated risk and achieve more as a team.',
+        name: "Ahmed Mashfique Raihan",
+        designation: "Data Engineer",
+        company: "Klarna",
+        image: seoul,
     },
     {
         testimonial:
-            "I love this serv22ice. It has made my work so much easier.",
-        name: "Jane Smith3",
-        designation: "Product Manag22er",
-        company: "Innovative 22Solutions",
-        image: raven,
+            "Liza joined our team when our senior application specialist left for higher education. She took over all of his responsibilities and handled his void place very quickly and confidently. I was very impressed at how she approached the role.",
+        name: "Md Asif Ahmed Oni",
+        designation: "Senior React Developer",
+        company: "Canadian Tire",
+        image: oni,
+    },
+    {
+        testimonial:
+            "She is very proactive member of our team. I found her encouraging to take new challenges and learn new things and implement. As a team member she is inspiring and fun loving, never thought twice to work with her in a new project.",
+        name: "Habibul Hasan Hira",
+        designation: "Full-Stack Software Developer",
+        company: "RAENA",
+        image: hira,
     },
 ];

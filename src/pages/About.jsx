@@ -4,7 +4,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-import { skills, experiences } from "../constants";
+import { skills, experiences, testimonials } from "../constants";
 
 import CTA from "../components/CTA";
 
@@ -13,23 +13,25 @@ const About = () => {
         <section className="max-container">
             <h1 className="head-text">
                 Hello, I'm{" "}
-                <span className="blue-gradient_text font-semibold drop-shadow">
+                <span className="pink-gradient_text font-semibold drop-shadow">
                     Liza
                 </span>
             </h1>
 
             <div className="mt-5 flex flex-col gap-3 text-slate-500">
                 <p>
-                    I'm a Software engineer passionate about improving the
-                    quality of human lives by bringing solutions to challenges
-                    and elevating both human and digital experiences. I'm a
+                    Software engineer passionate about improving the quality of
+                    human lives by bringing solutions to challenges and
+                    elevating both human and digital experiences. I'm a
                     Bangladeshi Canadian living in Toronto. I adore every single
                     majestic big cat, and dragons!
                 </p>
             </div>
 
             <div className="py-16">
-                <h3 className="subhead-text">Work Experience</h3>
+                <h3 className="subhead-text pink-gradient_text">
+                    Work Experience
+                </h3>
                 <div className="mt-5 flex flex-col gap-3 text-slate-500">
                     <p>
                         I've developed big scale products in a number of
@@ -92,7 +94,7 @@ const About = () => {
             </div>
 
             <div className="py-10 flex flex-col">
-                <h3 className="subhead-text">My Skills</h3>
+                <h3 className="subhead-text pink-gradient_text">My Skills</h3>
 
                 <div className="mt-16 pb-10 flex flex-wrap gap-12">
                     {skills.map((skill, index) => (
@@ -104,6 +106,51 @@ const About = () => {
                                     alt={skill.name}
                                     className="w-1/2 h-1/2 object-contain"
                                 />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <div className="py-10 flex flex-col">
+                <h3 className="subhead-text pink-gradient_text">
+                    What My Peers Say About Me
+                </h3>
+
+                <div className="mt-16 pb-10 flex flex-wrap justify-between">
+                    {testimonials.map((tm, index) => (
+                        <div
+                            key={index}
+                            className="pb-10 block-container flex w-full sm:w-1/4 flex-col rounded-lg bg-white shadow-[0_2px_25px_-3px_rgba(237,0,140,0.1),0_10px_40px_-2px_rgba(237,0,140,0.08)] dark:bg-neutral-700"
+                        >
+                            <div className="m-3 text-left testimonial-min-height">
+                                "{tm.testimonial}"
+                            </div>
+
+                            <div className="relative mt-2 mb-2">
+                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-300 to-transparent"></div>
+                            </div>
+
+                            <div className="pt-10 flex items-start">
+                                <div className="rounded-full overflow-hidden w-16 h-16 flex-shrink-0 ml-2 mr-2">
+                                    <img
+                                        src={tm.image}
+                                        alt={tm.name}
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
+                                <div className="ml-1">
+                                    <p className="font-normal text-sm">
+                                        {tm.name}
+                                    </p>
+                                    <p className="font-light text-sm">
+                                        {tm.designation}
+                                    </p>
+                                    <p className="font-light text-sm">
+                                        {tm.company}
+                                    </p>
+                                    <p>{tm.title}</p>
+                                </div>
                             </div>
                         </div>
                     ))}

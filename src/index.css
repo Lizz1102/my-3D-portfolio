@@ -31,7 +31,7 @@ body:has(.card[data-color="green"]:hover) {
     }
 
     .subhead-text {
-        @apply font-semibold sm:text-3xl text-xl relative font-poppins;
+        @apply font-normal sm:text-3xl text-xl relative font-poppins;
     }
 
     .blue-gradient_text {
@@ -343,4 +343,11 @@ body:has(.card[data-color="green"]:hover) {
 .visible {
     opacity: 1;
     visibility: visible;
+}
+
+@media (min-width: 768px) {
+    /* 768px is typically the breakpoint for medium devices */
+    .testimonial-min-height {
+        min-height: 265px;
+    }
 }
