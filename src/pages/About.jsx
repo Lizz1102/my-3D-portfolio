@@ -128,7 +128,7 @@ const About = () => {
                             </div>
 
                             <div className="relative mt-2 mb-2">
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-300 to-transparent"></div>
+                                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-pink-300 to-transparent"></div>
                             </div>
 
                             <div className="pt-10 flex items-start">
@@ -156,7 +156,9 @@ const About = () => {
                     ))}
                 </div>
             </div>
-
+            <div className="relative mt-2 mb-2">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-pink-300 to-transparent"></div>
+            </div>
             <hr className="border-slate-200" />
 
             <CTA />

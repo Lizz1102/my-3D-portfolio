@@ -128,7 +128,7 @@ const Contact = () => {
                     <button
                         type="submit"
                         disabled={isLoading}
-                        className="btn"
+                        className="btn-pink"
                         onFocus={handleFocus}
                         onBlur={handleBlur}
                     >
