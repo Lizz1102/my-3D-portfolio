@@ -21,7 +21,6 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => (
                 { to: "/about", text: "About Me" },
                 { to: "/projects", text: "My Projects" },
                 { to: "/contact", text: "Contact" },
-                { to: "/testimonials", text: "Peer Endorsements💖" },
                 { to: "/license", text: "License" },
             ].map(({ to, text }) => (
                 <li key={to}>
@@ -56,7 +55,6 @@ const Navbar = () => {
             const visible = currentScrollPos > 0;
             setPrevScrollPos(currentScrollPos);
             setVisible(visible);
-            console.log(visible);
         };
 
         window.addEventListener("scroll", handleScroll);

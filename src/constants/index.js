@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { raven, geotab, iqvia } from "../assets/images";
 import {
     car,
     contact,
@@ -11,75 +11,30 @@ import {
     javascript,
     linkedin,
     mongodb,
-    motion,
-    mui,
-    nextjs,
     nodejs,
     pricewise,
     react,
-    redux,
-    sass,
     snapgram,
     summiz,
     tailwindcss,
     threads,
     typescript,
+    aspnet,
+    csharp,
+    sql,
+    postgres,
+    aws,
 } from "../assets/icons";
 
 export const skills = [
     {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: express,
-        name: "Express",
+        imageUrl: aspnet,
+        name: "ASP.NET",
         type: "Backend",
     },
     {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
-    {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
+        imageUrl: csharp,
+        name: "Csharp",
         type: "Backend",
     },
     {
@@ -88,18 +43,8 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
+        imageUrl: javascript,
+        name: "JavaScript",
         type: "Frontend",
     },
     {
@@ -107,59 +52,94 @@ export const skills = [
         name: "TypeScript",
         type: "Frontend",
     },
+    {
+        imageUrl: nodejs,
+        name: "Node.js",
+        type: "Backend",
+    },
+    {
+        imageUrl: express,
+        name: "Express",
+        type: "Backend",
+    },
+    {
+        imageUrl: sql,
+        name: "sql",
+        type: "Database",
+    },
+    {
+        imageUrl: postgres,
+        name: "postgres",
+        type: "Database",
+    },
+    {
+        imageUrl: mongodb,
+        name: "MongoDB",
+        type: "Database",
+    },
+    {
+        imageUrl: aws,
+        name: "aws",
+        type: "Cloud",
+    },
+    {
+        imageUrl: tailwindcss,
+        name: "Tailwind CSS",
+        type: "Frontend",
+    },
+    {
+        imageUrl: html,
+        name: "HTML",
+        type: "Frontend",
+    },
+    {
+        imageUrl: git,
+        name: "Git",
+        type: "Version Control",
+    },
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
+        title: "Software Developer",
         company_name: "Geotab",
-        icon: starbucks,
+        icon: geotab,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "October 2021 - December 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
+            "Designing and developing features, backend services, SDKs, and API endpoints for fleet management products used by over 4 millions subscribers.",
+            "Developing new features in Maintenance, Notifications, and Safety area of MyGeotab web app.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
             "Participating in code reviews and providing constructive feedback to other developers.",
+            "ASP.NET Core, C#, Web API, PostgreSQL, JavaScript, React, TypeScript, HTML5/CSS3, Git/GitLab, CI/CD, Unit Testing, SOLID, Design Patterns.",
         ],
     },
     {
-        title: "React Native Developer",
+        title: "Software Engineer",
         company_name: "IQVIA",
-        icon: tesla,
+        icon: iqvia,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "September 2015 - March 2018",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developing RESTful APIs, databases for the web version of the pharmaceutical big data analytics desktop application, which is supporting clinical research and heathcare in over 100 countries worldwide.",
+            "Maintaining and developing PowerBuilder apps in collaboration with German team as backend developer.",
+            "Training developers of a new PowerBuilder team, consulting for the migration of a legacy PB tool to .NET C#, which secured a 40M project for that team.",
+            "Independently building an iOS app version of a widely used data analytics desktop tool.",
+            "ASP.NET C#, MVC, RESTful Web API, OAuth, RDBMS(MS SQL Server), JavaScript, OOP, TDD, xUnit, Sybase PowerBuilder.",
+            "Professional recognition: Star Contributor, Global Delivery Center for Innovation in Reporting Tools, September 2017.",
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Raven Systems",
-        icon: shopify,
+        title: "Android Application Developer",
+        company_name: "Raven",
+        icon: raven,
         iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        date: "Jan 2014 - September 2015",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Codeboxr",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developing e-Book reading application for huge library of Bengali books.",
+            "Designing customizable reading experience, syncing account and storage throughout devices and supporting all popular ebook formats.",
+            "Implementing offline reading and web syncing.",
+            "Collaborating with consultant, web developers in the designing process.",
         ],
     },
 ];
@@ -230,5 +210,30 @@ export const projects = [
         description:
             "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
         link: "https://github.com/adrianhajdin/project_ai_summarizer",
+    },
+];
+
+export const testimonials = [
+    {
+        testimonial: "This is a great product. I've had an amazing experience.",
+        name: "John Doe",
+        designation: "CEO",
+        company: "Tech Corp",
+        image: raven,
+    },
+    {
+        testimonial: "I love this service. It has made my work so much easier.",
+        name: "Jane Smith",
+        designation: "Product Manager",
+        company: "Innovative Solutions",
+        image: raven,
+    },
+    {
+        testimonial:
+            "I love this serv22ice. It has made my work so much easier.",
+        name: "Jane Smith3",
+        designation: "Product Manag22er",
+        company: "Innovative 22Solutions",
+        image: raven,
     },
 ];
