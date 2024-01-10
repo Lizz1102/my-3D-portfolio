@@ -1,6 +1,6 @@
 # My 3D Portfolio - lizas.space  
 
-- Live website link: coming soon! 
+- Live link: [lizas.space](https://lizas.space/)
 ## Ongoing Documentation Draft
 
 ### Notes For Future Reference
