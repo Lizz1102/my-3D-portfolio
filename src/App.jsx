@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Home, About, Projects, Contact } from "./pages";
+import { Home, About, Contact } from "./pages";
 import Navbar from "./components/Navbar";
 
 // TODO: Fix - https://lizas.space/contact - doesn't work when deployed, can only access via sidebar links
@@ -14,7 +14,6 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/projects" element={<Projects />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
             </Router>

@@ -9,9 +9,10 @@ import {
     html,
     javascript,
     linkedin,
+    insta,
     mongodb,
     nodejs,
-    pricewise,
+    box,
     react,
     snapgram,
     summiz,
@@ -145,70 +146,65 @@ export const experiences = [
 
 export const socialLinks = [
     {
-        name: "Contact",
-        iconUrl: contact,
-        link: "/contact",
-    },
-    {
-        name: "GitHub",
-        iconUrl: github,
-        link: "https://github.com/YourGitHubUsername",
-    },
-    {
         name: "LinkedIn",
-        iconUrl: linkedin,
-        link: "https://www.linkedin.com/in/YourLinkedInUsername",
+        iconImage: linkedin,
+        link: "https://www.linkedin.com/in/kamrunnaharliza/",
+    },
+    {
+        name: "Instagram",
+        iconImage: insta,
+        link: "https://www.instagram.com/lizzie.llv/",
     },
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: "btn-back-red",
-        name: "Amazon Price Tracker",
-        description:
-            "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-        link: "https://github.com/adrianhajdin/pricewise",
-    },
-    {
         iconUrl: threads,
-        theme: "btn-back-green",
-        name: "Full Stack Threads Clone",
+        theme: "btn-back-red",
+        name: "Imperfectionist Ink - Personal Blog Site",
         description:
-            'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: "https://github.com/adrianhajdin/threads",
+            "Interactive blogsite where I explore my creative side, and my journey to overcome the perfectionist in me. Developed the backend and APIs, updating the frontend to bring a personal touch and a minimalist UI.",
+        link: "https://imperfectionist.ink/",
     },
     {
-        iconUrl: car,
-        theme: "btn-back-blue",
-        name: "Car Finding App",
+        iconUrl: summiz,
+        theme: "btn-back-green",
+        name: "ASP.NET WebAPIs",
         description:
-            "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
-        link: "https://github.com/adrianhajdin/project_next13_car_showcase",
+            "Building Restful Web API projects with C# and exploring new features and incoming changes of .NET 6, .NET 7, and .NET 8. How to migrate .NET 5 APIs to later versions. Revisiting some advanced and fundamental concepts of .NET Core Web APIs.",
+        link: "https://github.com/Lizz1102/web-apis-.net-core",
+    },
+    {
+        iconUrl: box,
+        theme: "btn-back-pink",
+        name: "3D Portfolio",
+        description:
+            "Designed my portfolio using 3D models while learning immersive and personalized website design. Checkout the code of this website in the link below!",
+        link: "https://github.com/Lizz1102/my-3D-portfolio",
     },
     {
         iconUrl: snapgram,
         theme: "btn-back-pink",
-        name: "Full Stack Instagram Clone",
+        name: "Retail Management System",
         description:
-            "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
-        link: "https://github.com/adrianhajdin/social_media_app",
+            "Building this makeover studio management system where the client can utilize the system for managing the inventory, and the users of the system can buy services and process payment securely.",
+        link: "https://github.com/Lizz1102/lizas-retail-manager",
     },
     {
         iconUrl: estate,
-        theme: "btn-back-black",
-        name: "Real-Estate Application",
+        theme: "btn-back-green",
+        name: "AWS SAM Projects",
         description:
-            "Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.",
-        link: "https://github.com/adrianhajdin/projects_realestate",
+            "Some mini projects like Scheduled News Generator, Face Rekognition etc using AWS Serverless Application Model - SAM.",
+        link: "https://github.com/Lizz1102/AWS-SAM-Projects",
     },
     {
         iconUrl: summiz,
         theme: "btn-back-yellow",
-        name: "AI Summarizer Application",
+        name: "Terraform AWS Development Environment",
         description:
-            "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
-        link: "https://github.com/adrianhajdin/project_ai_summarizer",
+            "This project allows us to create a fully customizable development environment on AWS using Terraform.",
+        link: "https://github.com/Lizz1102/terraform-aws-dev-environment",
     },
 ];
 

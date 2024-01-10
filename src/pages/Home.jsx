@@ -11,10 +11,6 @@ import { soundoff, soundon, dragHandIcon } from "../assets/icons";
 import Island2 from "../models/Island2";
 import Dragon from "../models/Dragon";
 
-// TODO:
-// Reduce load time by reducing the size of the 3D models
-// Add credit page for sketchfab 3D artists
-// Nicer message sent alert
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));
     audioRef.current.volume = 0.2;

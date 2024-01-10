@@ -19,7 +19,6 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => (
             {[
                 { to: "/", text: "Liza's Space" },
                 { to: "/about", text: "About Me" },
-                { to: "/projects", text: "My Projects" },
                 { to: "/contact", text: "Contact" },
                 { to: "/license", text: "License" },
             ].map(({ to, text }) => (
@@ -27,8 +26,8 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => (
                     <NavLink
                         to={to}
                         className={({ isActive }) =>
-                            `font-poppins text-sm md:text-lg ${
-                                isActive ? "text-blue-600" : "text-white"
+                            `nav-link font-poppins text-sm md:text-lg transition-all duration-300 ${
+                                isActive ? "text-white active" : "text-white"
                             }`
                         }
                         onClick={toggleSidebar}

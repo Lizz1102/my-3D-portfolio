@@ -3,8 +3,8 @@ const Alert = ({ type, text }) => {
         <div className="absolute top-10 left-0 right-0 flex justify-center items-center">
             <div
                 className={`p-2 ${
-                    type === "danger" ? "bg-red-800" : "bg-green-800"
-                } items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex`}
+                    type === "danger" ? "bg-red-500" : "bg-green-500"
+                } items-center text-indigo-100 leading-none lg:rounded-md flex lg:inline-flex`}
                 role="alert"
             >
                 <p

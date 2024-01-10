@@ -7,13 +7,10 @@ import Loader from "../components/Loader";
 import Alert from "../components/Alert";
 import Dragon2 from "../models/Dragon2";
 
-// TODO: Fix grey background isnt working on mobile
-// Fix dragon isn't centered on mobile
-// Fix Dragon is too small on mobile
 const Contact = () => {
     const formRef = useRef(null);
     const [form, setForm] = useState({ name: "", email: "", message: "" });
-    //const { alert, showAlert, hideAlert } = useAlert();
+    
     const [isLoading, setIsLoading] = useState(false);
     const [currentAnimation, setCurrentAnimation] = useState(["stand"]);
 
@@ -75,7 +72,7 @@ const Contact = () => {
             {alert.show && <Alert {...alert} />}
 
             <div className="flex-grow min-w-[35%] flex flex-col">
-                <h1 className="head-text">Get in Touch</h1>
+                <h1 className="head-text pink-gradient_text">Get in Touch</h1>
 
                 <form
                     ref={formRef}

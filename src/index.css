@@ -55,8 +55,8 @@ body:has(.card[data-color="green"]:hover) {
     }
 
     .btn-pink {
-    @apply text-white bg-gradient-to-r from-[#fff000] to-[#ed008c] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
-}
+        @apply text-white bg-gradient-to-r from-[#fff000] to-[#ed008c] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+    }
 
     .header {
         @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
@@ -284,7 +284,7 @@ body:has(.card[data-color="green"]:hover) {
     width: 80%;
     max-width: 400px;
     height: 100vh;
-    background: black;
+    background: rgba(255, 105, 105, 0.5);
     backdrop-filter: blur(35px);
     display: flex;
     flex-direction: column;
@@ -325,6 +325,25 @@ body:has(.card[data-color="green"]:hover) {
     z-index: 10;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
+}
+
+.nav-link.active::before {
+    content: "❤";
+    color: white;
+    margin-right: 5px;
+}
+
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background: white;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .menu-icon {
