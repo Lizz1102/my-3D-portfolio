@@ -1,3 +1,5 @@
+// License: Prof.v7x - https://sketchfab.com/3d-models/dragon-white-low-poly-7b89c3d4718e4131b1ecf169fd05d2ba 
+
 import { useRef, useEffect } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
 

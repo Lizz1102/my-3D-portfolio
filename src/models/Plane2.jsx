@@ -1,3 +1,5 @@
+// License: Nicola Ristagno - https://sketchfab.com/3d-models/aircarft-biplane-29c2f61dcb014ca5997f2833153f8e34
+
 import { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
