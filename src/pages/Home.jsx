@@ -6,15 +6,16 @@ import Sky from "../models/Sky";
 import Plane2 from "../models/Plane2";
 import HomeInfo from "../components/HomeInfo";
 
-import sakura from "../assets/sakura.mp3";
+import Soundtrack from "../assets/SecretKissing.mp3";
 import { soundoff, soundon, dragHandIcon } from "../assets/icons";
 import Island2 from "../models/Island2";
 import Dragon from "../models/Dragon";
 
 const Home = () => {
-    const audioRef = useRef(new Audio(sakura));
-    audioRef.current.volume = 0.2;
+    const audioRef = useRef(new Audio(Soundtrack));
+    audioRef.current.volume = 0.5;
     audioRef.current.loop = true;
+
     const [currentStage, setCurrentStage] = useState(null);
     const [isRotating, setIsRotating] = useState(false);
     const [isPlayingMusic, setIsPlayingMusic] = useState(false);
@@ -71,9 +72,7 @@ const Home = () => {
 
             {showHint && (
                 <>
-                    <div className="hint-text">
-                        Drag To Explore
-                    </div>
+                    <div className="hint-text">Drag To Explore</div>
                     <div className="hand-icon-outer-container">
                         <div className="hand-icon-container">
                             <img

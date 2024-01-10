@@ -45,6 +45,8 @@ const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(false);
 
+    const menuIconRef = React.useRef(null);
+
     const location = useLocation();
     const isHomePage = location.pathname === "/";
 
@@ -62,6 +64,20 @@ const Navbar = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [prevScrollPos]);
+
+    useEffect(() => {
+        const closeSidebarIfOpen = (e) => {
+            if (isSidebarOpen && e.target !== menuIconRef.current) {
+                toggleSidebar();
+            }
+        };
+
+        document.addEventListener("click", closeSidebarIfOpen);
+
+        return () => {
+            document.removeEventListener("click", closeSidebarIfOpen);
+        };
+    }, [isSidebarOpen]);
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -94,7 +110,7 @@ const Navbar = () => {
                     }`}
                     onClick={toggleSidebar}
                 >
-                    <img src={menu4} alt="Menu" />
+                    <img ref={menuIconRef} src={menu4} alt="Menu" />
                 </div>
             </div>
         </>

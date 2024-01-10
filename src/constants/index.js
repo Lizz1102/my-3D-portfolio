@@ -163,7 +163,7 @@ export const projects = [
         theme: "btn-back-red",
         name: "Imperfectionist Ink - Personal Blog Site",
         description:
-            "Interactive blogsite where I explore my creative side, and my journey to overcome the perfectionist in me. Developed the backend and APIs, updating the frontend to bring a personal touch and a minimalist UI.",
+            "Interactive blogsite where I explore my creative side, and my journey to overcome the perfectionist in me. Developed the backend services, databases, upgrading the frontend to bring a personal touch and a minimalist UI.",
         link: "https://imperfectionist.ink/",
     },
     {

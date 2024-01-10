@@ -374,3 +374,43 @@ body:has(.card[data-color="green"]:hover) {
         min-height: 265px;
     }
 }
+
+.font-thin {
+    font-weight: 200;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.transition-all {
+    transition-property: all;
+}
+
+.duration-500 {
+    transition-duration: 500ms;
+}
+
+.ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transform {
+    transform-origin: center;
+}
+
+.translate-y-0 {
+    transform: translateY(0);
+}
+
+.translate-y-full {
+    transform: translateY(100%);
+}
+
+.opacity-100 {
+    opacity: 100;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
