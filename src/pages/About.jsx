@@ -85,7 +85,7 @@ const TestimonialsSection = ({ testimonials }) => (
         {testimonials.map((tm, index) => (
             <div
                 key={index}
-                className="pb-10 block-container flex w-full sm:w-1/4 flex-col rounded-lg bg-white shadow-[0_2px_25px_-3px_rgba(237,0,140,0.1),0_10px_40px_-2px_rgba(237,0,140,0.08)] dark:bg-neutral-700"
+                className="pb-10 block-container flex w-full sm:w-1/4 flex-col rounded-lg bg-white shadow-[0_2px_25px_-3px_rgba(237,0,140,0.1),0_10px_40px_-2px_rgba(237,0,140,0.08)]"
             >
                 <div className="m-3 text-left testimonial-min-height">
                     "{tm.testimonial}"
@@ -160,7 +160,11 @@ const About = () => {
                 </h3>
                 <div className="mt-5 flex flex-col gap-3 text-slate-500">
                     <p>
-                        I've embarked on numerous personal projects throughout the years, but these are some of the ones I've worked during last year(2023) and some are in progress. I've linked the github repos and the live links for the ones that are live!
+                        I've embarked on numerous personal projects throughout
+                        the years, but these are some of the ones I've worked
+                        during last year (2023) and some are in progress. I've
+                        linked the github repos and the live links for the ones
+                        that are live!
                     </p>
                 </div>
 

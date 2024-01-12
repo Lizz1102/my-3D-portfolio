@@ -144,24 +144,12 @@ export const experiences = [
     },
 ];
 
-export const socialLinks = [
-    {
-        name: "LinkedIn",
-        iconImage: linkedin,
-        link: "https://www.linkedin.com/in/kamrunnaharliza/",
-    },
-    {
-        name: "Instagram",
-        iconImage: insta,
-        link: "https://www.instagram.com/lizzie.llv/",
-    },
-];
 
 export const projects = [
     {
         iconUrl: threads,
         theme: "btn-back-red",
-        name: "Imperfectionist Ink - Personal Blog Site",
+        name: "Imperfectionist Ink - Personal Blog",
         description:
             "Interactive blogsite where I explore my creative side, and my journey to overcome the perfectionist in me. Developed the backend services, databases, upgrading the frontend to bring a personal touch and a minimalist UI.",
         link: "https://imperfectionist.ink/",
@@ -203,7 +191,7 @@ export const projects = [
         theme: "btn-back-yellow",
         name: "Terraform AWS Development Environment",
         description:
-            "This project allows us to create a fully customizable development environment on AWS using Terraform.",
+            "This project allows us to create a fully customizable development environment in AWS using Terraform.",
         link: "https://github.com/Lizz1102/terraform-aws-dev-environment",
     },
 ];
