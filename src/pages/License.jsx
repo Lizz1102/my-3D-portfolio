@@ -54,15 +54,14 @@ const License = () => {
 
             <div>
                 <h2 className="text-2xl font-semibold mt-14 pb-8">
-                    About Zaldrizes{" "}
+                    About Zaldrīzes{" "}
                 </h2>
                 <p className="text-slate-500">
-                    My dragon's name is Zaldrizes. The name is inspired by
-                    Valyrian word for 'dragonfire' in Game of Thrones.
+                    My dragon's name is Zaldrīzes - inspired by the Valyrian word for 'dragonfire' in Game of Thrones.
                 </p>
                 <p className="mt-4">
                     <Sparkles>
-                        'Zaldrizes buzdari iksos daor' - 'A dragon is not a
+                        'Zaldrīzes buzdari iksos daor' - 'A dragon is not a
                         slave'
                     </Sparkles>
                 </p>
