@@ -1,11 +1,23 @@
-# My 3D Portfolio - lizas.space  
+# My 3D Portfolio - **Live Link**: [lizas.space](https://lizas.space/)  
 
-- Live link: [lizas.space](https://lizas.space/)
+I built this fun toy portfolio when I was learning frontend and CSS frameworks.  
+
+https://github.com/Lizz1102/my-3D-portfolio/assets/15815335/e63b0dd2-b9ab-4d4c-8b47-f7e5dddb9321
+
+
+https://github.com/Lizz1102/my-3D-portfolio/assets/15815335/50df1f4b-4640-4b23-a173-763ea0791785
+
+
+## Motivation For Building This Website
+
+
+- As a backend-focused developer, I haven't worked extensively with many cool UIs, so I made this website when I was learning React.js, Three.js, and playing with CSS framework Tailwind while I take my frontend skill to the next level.
+- I was looking at some recent trends and futuristic websites, and Three.js, React Fiber drew my attention - specially how these frameworks make it possible to add personalized touch and make the experience of the visitors more memorable. Integrating 3D models, appropriate amount of animations into websites keep the design minimalistic and focused, only with more dimension and an immersive digital experience. 
+
 ## Ongoing Documentation Draft
 
-### Notes For Future Reference
+### Notes For My Future Reference
 
-- Goal: Become better at building impressive React UIs and take the skill to the next level by learning how to upgrade them by React Three Fiber. And build a cool portfolio!
 - React Three Fiber and Three.js for 3D rendering
 - Tailwind CSS for styling
 
@@ -15,14 +27,15 @@
 - npm install @react-three/fiber;
 - Canvas - https://docs.pmnd.rs/react-three-fiber/api/canvas
 - Drei - https://github.com/pmndrs/drei - npm install @react-three/drei;
--
+
+  
 ### Rotation 
 
 - Three.js renderer and viewport.
 - useThree() hook
 - useRef to get the last mouse position
-- 
 
+  
 ### 3D Models
 
 - Download 3D models for free - https://sketchfab.com/
@@ -52,8 +65,8 @@
 
 ## Credits
 
+- https://lizas.space/license
 - [Joshua's World](https://www.joshuas.world/)
-- [Emilian Kasemi](https://www.youtube.com/watch?v=mJRuHhKJ2cs&t=8s&ab_channel=EmilianKasemi)
 - [Adrian Hajdin](https://www.youtube.com/watch?v=FkowOdMjvYo&list=PL6QREj8te1P7rEwj_IzsoLzQ-FBbZ6lqP&ab_channel=JavaScriptMastery)
 - [Free Custom Logo Maker](https://logo.com/)
 - [Tailwind CSS - The best CSS Framework](https://tailwindcss.com/)
